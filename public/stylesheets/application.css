@@ -1,0 +1,175 @@
+body, html {
+  height: 100%;
+}
+body {
+  background-image: linear-gradient(white, #f8f8f8);
+}
+#kluge {
+  background: url("/images/shirt_guy.png") top center no-repeat;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.login-button:focus {
+  outline: none;
+
+}
+.navbar-default .navbar-brand {
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  font-size: 3em;
+  letter-spacing: 5px;
+}
+.navbar {
+  z-index: 2;
+}
+
+.shirt-generator {
+  bottom: 0;
+  left: 100px;
+  position: fixed;
+  right: 100px;
+  top: 50px;
+  z-index: 3;
+}
+.shirt-generator .shirt-illustration {
+  background: url("/images/shirt_guy.png") top center no-repeat;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 800px;
+  padding-bottom: 50px;
+  position: relative;
+  top: -50px;
+}
+.shirt-generator .shirt-illustration img {
+  background: linear-gradient(white, #e6e9eb);
+  height: 200px;
+  left: 50%;
+  position: relative;
+  top: 170px;
+  transform: translateX(-50%);
+  -webkit-transform: translate(-50%,0);
+  width: 300px;
+}
+.shirt-generator .content-nav .content-nav-button {
+  background: #8fbcdb;
+  background-image: -webkit-linear-gradient(top, #8fbcdb, #1672ab);
+  background-image: -moz-linear-gradient(top, #8fbcdb, #1672ab);
+  background-image: -ms-linear-gradient(top, #8fbcdb, #1672ab);
+  background-image: -o-linear-gradient(top, #8fbcdb, #1672ab);
+  background-image: linear-gradient(to bottom, #8fbcdb, #1672ab);
+  -webkit-border-radius: 12;
+  -moz-border-radius: 12;
+  border-radius: 12px;
+  text-shadow: 1px 1px 3px #292129;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 15px 30px 15px 30px;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+.shirt-generator .content-nav .content-nav-button:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #bfd6e6);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #bfd6e6);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #bfd6e6);
+  background-image: -o-linear-gradient(top, #3cb0fd, #bfd6e6);
+  background-image: linear-gradient(to bottom, #3cb0fd, #bfd6e6);
+  text-decoration: none;
+}
+.shirt-generator .content-nav .content-nav-button:focus {
+  outline: none;
+}
+
+@media (min-width: 1280px) {
+  .shirt-generator .content-nav {
+    bottom: 100px;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+  .shirt-generator .content-nav .alternate {
+    display: block;
+    float: right;
+    width: 50%;
+  }
+  .shirt-generator .content-nav .alternate .inner {
+    display: block;
+    margin-left: 400px;
+    text-align: center;
+  }
+  .shirt-generator .content-nav .primary {
+    display: block;
+    float: left;
+    width: 50%;
+  }
+  .shirt-generator .content-nav .primary .inner {
+    display: block;
+    margin-right: 400px;
+    text-align: center;
+  }
+}
+@media (max-width: 1279px) {
+  .shirt-generator .content-nav {
+    bottom: 50px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+  }
+  .shirt-generator .content-nav .inner {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+#shirt_button {
+  position:fixed;
+  top: 58px;
+  right: 5px;
+}
+/*
+
+#shirt_button {
+  -moz-box-shadow: 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow: 0px 1px 0px 0px #ffffff;
+  box-shadow: 0px 1px 0px 0px #ffffff;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c1cce8), color-stop(1, #ccc2a6));
+  background:-moz-linear-gradient(top, #c1cce8 5%, #ccc2a6 100%);
+  background:-webkit-linear-gradient(top, #c1cce8 5%, #ccc2a6 100%);
+  background:-o-linear-gradient(top, #c1cce8 5%, #ccc2a6 100%);
+  background:-ms-linear-gradient(top, #c1cce8 5%, #ccc2a6 100%);
+  background:linear-gradient(to bottom, #c1cce8 5%, #ccc2a6 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c1cce8', endColorstr='#ccc2a6',GradientType=0);
+  background-color:#c1cce8;
+  -moz-border-radius:15px;
+  -webkit-border-radius:15px;
+  border-radius:15px;
+  border:2px solid #ffffff;
+  display:inline-block;
+  cursor:pointer;
+  color:#363831;
+  font-family:Arial;
+  font-size:12px;
+  font-weight:bold;
+  padding:5px 16px;
+  text-decoration:none;
+}
+#shirt_button:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ccc2a6), color-stop(1, #c1cce8));
+  background:-moz-linear-gradient(top, #ccc2a6 5%, #c1cce8 100%);
+  background:-webkit-linear-gradient(top, #ccc2a6 5%, #c1cce8 100%);
+  background:-o-linear-gradient(top, #ccc2a6 5%, #c1cce8 100%);
+  background:-ms-linear-gradient(top, #ccc2a6 5%, #c1cce8 100%);
+  background:linear-gradient(to bottom, #ccc2a6 5%, #c1cce8 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc2a6', endColorstr='#c1cce8',GradientType=0);
+  background-color:#ccc2a6;
+}
+#shirt_button:active {
+  position:relative;
+  top:1px;
+}*/

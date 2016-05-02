@@ -1,0 +1,40 @@
+<% if @subscription %>
+  <div class="container" style="text-align:center">
+    <div class="row login-group">
+      <div class="col-md-4"></div>
+      <div class="col-md-4 col-xs-12 form-group">
+        <div class="logo">Your Profile</div>
+        <p>email: <%= @logged_in_user.email %></p>
+        <div class="subheading">Subscription information</div>
+        <div>
+          <p>shirt type: <%= @subscription.gender %></p>
+          <p>size: <%= @subscription.size %></p>
+          <p>address: <%= @subscription.address %></p>
+          <p>city: <%= @subscription.city %></p>
+          <p>country: <%= @subscription.country %></p>
+          <p>postal code: <%= @subscription.postal_code %></p>
+        </div>
+
+        <form action="/subscriptions/update" method="get">
+          <input type="submit" value="update profile" class="btn btn-info">
+        </form>
+        <br/>
+
+        <form action="/subscriptions/cancel" method="post">
+          <input type="hidden" name="subscription_id" value="<%= @subscription.id %>">
+          <input type="submit" value="cancel subscription" class="btn btn-info">
+        </form>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div style="text-align:center; padding-top: 100px">
+    <h5>You don't have any subcriptions</h5>
+    
+    <form action='/subscriptions/new' method="get">
+      <input type="submit" value="add a subscription" class="btn btn-primary">
+    </form>
+  </div>
+  <div class="col-md-4"></div>
+  </div>
+<% end %>

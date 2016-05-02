@@ -1,0 +1,55 @@
+<% if @subscription %>
+<div class="text-center" style="padding:50px 0">
+  <div class="logo">Update your Profile</div>
+  <!-- Main Form -->
+  <div class="login-form-1">
+    <form id="subscribe-form" action="/subscriptions/update" method="post" class="text-left">
+      <div class="login-form-main-message"></div>
+      <div class="main-login-form">
+        <div class="login-group">
+          <div class="form-group">
+            <label for="address" class="sr-only">address</label>
+            <input type="text" class="form-control" id="address" name="address" placeholder="<%= @subscription.address %>" value="<%= @subscription.address %>">
+          </div>
+
+          <div class="form-group">
+            <label for="city" class="sr-only">city</label>
+            <input type="text" class="form-control" id="city" name="city" placeholder="<%= @subscription.city %>" value="<%= @subscription.city %>">
+          </div>
+
+          <div class="form-group">
+            <label for="postal_code" class="sr-only">postal code</label>
+            <input type="text" class="form-control" id="postal_code" name="postal_code" placeholder="<%= @subscription.postal_code  %>" value="<%= @subscription.postal_code %>">
+          </div>
+
+          <div class="form-group">
+            <label for="country" class="sr-only">country</label>
+            <input type="text" class="form-control" id="country" name="country" placeholder="<%= @subscription.country %>" value="<%= @subscription.country %>">
+          </div>
+
+          <div class="form-group login-group-checkbox">
+            <input type="radio" class="" name="gender" id="female" value="female" <% if @subscription.gender == "female" %> checked <% end %>>
+            <label for="female">female shirt style</label>
+
+            <input type="radio" class="" name="gender" id="male" value="male" <% if @subscription.gender == "male" %> checked <% end %>>
+            <label for="male">male shirt style</label>
+          </div>
+
+          <div class="form-group login-group-checkbox">
+            <input type="radio" class="" name="size" id="small" value="small" <% if @subscription.size == "small" %>checked <% end %>>
+            <label for="small">small</label>
+
+            <input type="radio" class="" name="size" id="medium" value="medium" <% if @subscription.size == "medium" %>checked <% end %>>
+            <label for="medium">medium</label>
+
+            <input type="radio" class="" name="size" id="large" value="large" <% if @subscription.size == "large" %>checked <% end %>>
+            <label for="large">large</label>
+          </div>
+        </div>
+        <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+      </div>
+    </form>
+  </div>
+  <!-- end:Main Form -->
+</div>
+<% end %>

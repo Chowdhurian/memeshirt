@@ -1,0 +1,26 @@
+
+
+
+<div class="text-center" style="padding:50px 0">
+<div class="logo">Checkout</div>
+<form action="/subscriptions/charge" method="post" class="payment">
+  <article>
+    <label class="amount">
+
+      <span>Amount: $25.00</span>
+
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= settings.publishable_key %>"
+    data-description="A month's subscription"
+    data-amount="2500"
+    data-email=<%= @logged_in_user.email %>
+    data-locale="auto">
+  </script>
+  </form>
+</div>
+
+
+
